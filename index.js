@@ -17,7 +17,7 @@ module.exports = function log({ name = 'log', level = 'info', env = 'production'
         index_meta: true, // Defaults to false, when true ensures meta object will be searchable
         handleExceptions: true // Only add this line in order to track exceptions
       }, logdna)
-      logger.add(winston.transports.Logdna, logdna)
+      logger.add(ldna.WinstonTransport, logdna)
     }
     return logger
   }
