@@ -27,5 +27,6 @@ module.exports = function log({ name = 'log', level = 'info', env = 'production'
   })
   const toYAML = require('winston-console-formatter')
   logger.add(winston.transports.Console, toYAML.config())
+  logger.warn = logger.warning
   return logger
 }
